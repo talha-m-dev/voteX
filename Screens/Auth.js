@@ -24,7 +24,7 @@ const Auth = ({route, navigation}) => {
           title="Log in     "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Login', {ref})}
         />
         <Button
           buttonStyle={styles.btn}
