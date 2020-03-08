@@ -32,7 +32,7 @@ const Auth = ({route, navigation}) => {
           title=" Register   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Register', {ref})}
         />
         <Button
           buttonStyle={styles.btn}

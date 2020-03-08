@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './Screens/Home';
 import Auth from './Screens/Auth';
+import Register from './Screens/Register';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ function App() {
         initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Auth} />
+        <Stack.Screen name="Register" component={Register} />
       </Stack.Navigator>
     </NavigationContainer>
   );
