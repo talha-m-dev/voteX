@@ -1,5 +1,4 @@
-package com.votex;
-import com.oblador.vectoricons.VectorIconsPackage;
+package com.votex;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
