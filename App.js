@@ -6,6 +6,7 @@ import Home from './Screens/Home';
 import Auth from './Screens/Auth';
 import Register from './Screens/Register';
 import Login from './Screens/Login';
+import E_Dashbord from './Screens/Election_commission/E_Dashbord';
 
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ function App() {
         <Stack.Screen name="Details" component={Auth} />
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="E_Dashbord" component={E_Dashbord} />
       </Stack.Navigator>
     </NavigationContainer>
   );

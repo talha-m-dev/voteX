@@ -38,6 +38,7 @@ const Login = ({route, navigation}) => {
           title=" Login   "
           type="outline"
           iconRight={true}
+          onPress={() => navigation.navigate('E_Dashbord')}
         />
         <Button
           buttonStyle={styles.btn}
