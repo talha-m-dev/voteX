@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient';
-import { Avatar } from 'react-native-elements';
+import { Avatar , Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function E_Dashbord() {
@@ -21,11 +21,70 @@ export default function E_Dashbord() {
             </LinearGradient>
             <View>
                 <View style={styles.bord}>
-                    <TouchableOpacity style={styles.card}>
                     
-                       <Icon style={styles.icon} name="pencil" size={30} color="#457b9d" />
-                    
-                    </TouchableOpacity>
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
+                    <Button
+                        buttonStyle={styles.btn}
+                        icon={<Icon reverse raised name="slideshare" size={25} color="#457b9d" />}
+                        title="Add Orgnization"
+                        type="outline"
+                        onPress={() => {
+                            navigation.navigate('Add_org');
+                          }}
+                        />
                 </View>
             </View>
 
@@ -60,4 +119,11 @@ const styles = StyleSheet.create({
     icon:{
         padding:30,
     },
+    btn: {
+        margin:10,
+        paddingVertical:40,
+        paddingHorizontal:20,
+        
+        flexDirection:"column",
+      },
 })
