@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {Text, StyleSheet, Dimensions, View} from 'react-native';
 import {Button} from 'react-native-elements';
