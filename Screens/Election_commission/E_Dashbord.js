@@ -1,25 +1,41 @@
 /* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {StyleSheet,TouchableOpacity, Dimensions,View} from 'react-native';
+import React, {useState}from 'react';
+import {StyleSheet,TouchableOpacity,Text, Dimensions,View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {Avatar,Divider} from 'react-native-elements';
+import {Avatar,Divider,Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
+
 
 
 const {width} = Dimensions.get('window');
 export default function E_Dashbord({navigation}) {
+  // const [overly, setOverly] = useState(true);
   return (
-    <View style={styles.container}>
+    <View  style={styles.container}>
+      {/* {console.log(overly)} */}
+    {/* <Overlay
+    isVisible={overly}
+    windowBackgroundColor="rgba(255, 255, 255, .5)"
+    overlayBackgroundColor="red"
+    width="auto"
+    height="auto"
+    onBackdropPress={() => setOverly(false)}
+
+  >
+    <Text>Hello from Overlay!</Text>
+  </Overlay> */}
+    <View >
        <LinearGradient
        start={{x: 0.0, y: 0.0}} end={{x: 0.2, y: 0.5}}
        locations={[1,0]}
-       colors={['#192f6a',  '#FFF']}
+       colors={['#4BA3C3',  '#FFF']}
         > 
         {/*   <View style={styles.lngrd}>*/}
         <Avatar
           containerStyle={styles.avt}
-          showEditButton
+          showEditButton={true}
           source={{
             uri:
               'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
@@ -34,18 +50,20 @@ export default function E_Dashbord({navigation}) {
           borderLeftColor: 'red',
           }}
         />
-          <View style={{flexDirection:'row',justifyContent:'center',}}>
-          <Divider style={{ backgroundColor: 'blue',height:100,width:1, margin:10 }} />
-        <Divider style={{ backgroundColor: 'blue',height:100,width:1, margin:10 }} />
-        <Divider style={{ backgroundColor: 'blue',height:100,width:1, margin:10 }} />
+          <View style={{flexDirection:'row',justifyContent:'space-around', }}>
+          <Text style={styles.text}>58</Text>
+          <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
+          <Text style={styles.text}>58</Text>
+        <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
+        <Text style={styles.text}>58</Text>
           </View>
         
-        <Divider style={{ backgroundColor: 'blue',marginTop:150, }} />
+        <Divider style={{ backgroundColor: '#4BA3C3',marginTop:10,  height:1}} />
 
       </LinearGradient> 
       {/* </View> */}
       <View style={styles.main}>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={()=>navigation.navigate('Add_org')}>
           <Icon name="plus" size={30} color="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.card}>
@@ -64,7 +82,8 @@ export default function E_Dashbord({navigation}) {
       </View>
  
     </View>
-  );
+  
+    </View>);
 }
 
 const styles = StyleSheet.create({
@@ -89,13 +108,18 @@ const styles = StyleSheet.create({
     flexWrap:"wrap",
     justifyContent: 'center',
     backgroundColor: '#fff',
+    marginTop:50,
   },
   card: {
     borderWidth: 1,
     padding:35,
     
     margin:10,
-    backgroundColor: '#a8dadc',
+    backgroundColor: '#4BA3C3',
     borderColor: '#3A1C71',
+  },
+  text:{
+    fontSize:30,
+    margin:10,
   },
 });
