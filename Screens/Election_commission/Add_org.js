@@ -1,10 +1,26 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import { Overlay } from 'react-native-elements';
-export default function Add_org() {
+import { Kaede } from 'react-native-textinput-effects';
+
+export default function Add_Org() {
   return (
     <View>
-      
+      <Kaede
+    label={'Name of Orgnization'}
+    inputPadding={16}
+  />
+  <Kaede
+    label={'Website'}
+    inputPadding={16}
+  />
+  <Kaede
+    label={'Website'}
+    inputPadding={16}
+  />
+  <Kaede
+    label={'Website'}
+    inputPadding={16}
+  />
     </View>
   );
 }

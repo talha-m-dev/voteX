@@ -14,20 +14,9 @@ export default function E_Dashbord({navigation}) {
   // const [overly, setOverly] = useState(true);
   return (
     <View  style={styles.container}>
-      {/* {console.log(overly)} */}
-    {/* <Overlay
-    isVisible={overly}
-    windowBackgroundColor="rgba(255, 255, 255, .5)"
-    overlayBackgroundColor="red"
-    width="auto"
-    height="auto"
-    onBackdropPress={() => setOverly(false)}
-
-  >
-    <Text>Hello from Overlay!</Text>
-  </Overlay> */}
-    <View >
-       <LinearGradient
+      
+    
+       <LinearGradient style={styles.lngrd}
        start={{x: 0.0, y: 0.0}} end={{x: 0.2, y: 0.5}}
        locations={[1,0]}
        colors={['#4BA3C3',  '#FFF']}
@@ -61,15 +50,15 @@ export default function E_Dashbord({navigation}) {
         <Divider style={{ backgroundColor: '#4BA3C3',marginTop:10,  height:1}} />
 
       </LinearGradient> 
-      {/* </View> */}
+     
       <View style={styles.main}>
-        <TouchableOpacity style={styles.card} onPress={()=>navigation.navigate('Add_org')}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_Org')}}>
           <Icon name="plus" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_Org')}}>
           <Icon name="list-alt" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_org')}}>
           <Icon name="check-square-o" size={30} color="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.card}>
@@ -81,34 +70,30 @@ export default function E_Dashbord({navigation}) {
         
       </View>
  
-    </View>
+  
   
     </View>);
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+   flex:1,
   },
   lngrd:{
-    borderRightWidth: width,
-    borderRightColor: 'red',
-    borderTopWidth: width,
-    borderTopColor: 'green',
-    position: 'absolute',
-    opacity: 0.5,
+   flex:1
   },
   avt: {
     alignSelf: 'center',
-    margin: 50,
+    margin:50,
+   
   },
   main: {
-    flex: 1,
+    flex:1,
     flexDirection:"row",
     flexWrap:"wrap",
     justifyContent: 'center',
-    backgroundColor: '#fff',
-    marginTop:50,
+    backgroundColor: '#FFF',
+    
   },
   card: {
     borderWidth: 1,

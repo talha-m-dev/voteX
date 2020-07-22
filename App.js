@@ -7,7 +7,7 @@ import Auth from './Screens/Auth';
 import Register from './Screens/Register';
 import Login from './Screens/Login';
 import E_Dashbord from './Screens/Election_commission/E_Dashbord';
-import Add_org from './Screens/Election_commission/Add_org';
+import Add_Org from './Screens/Election_commission/Add_Org';
 
 
 const Stack = createStackNavigator();
@@ -25,7 +25,7 @@ function App() {
         <Stack.Screen name="Register" component={Register} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="E_Dashbord" component={E_Dashbord} />
-        <Stack.Screen name="Add_org" component={Add_org} />
+        <Stack.Screen name="Add_Org" component={Add_Org} />
       </Stack.Navigator>
     </NavigationContainer>
   );
