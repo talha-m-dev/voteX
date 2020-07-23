@@ -34,11 +34,12 @@ export default function E_Dashbord({navigation}) {
         />
         <View
           style={{
-            margin:10,
+            margin:2,
           borderLeftWidth: 1,
           borderLeftColor: 'red',
           }}
         />
+        <Text style={styles.text,{alignSelf:"center",fontSize:30,marginBottom:20,}}>My Name</Text>
           <View style={{flexDirection:'row',justifyContent:'space-around', }}>
           <Text style={styles.text}>58</Text>
           <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
@@ -47,7 +48,7 @@ export default function E_Dashbord({navigation}) {
         <Text style={styles.text}>58</Text>
           </View>
         
-        <Divider style={{ backgroundColor: '#4BA3C3',marginTop:10,  height:1}} />
+        <Divider style={{ backgroundColor: '#4BA3C3',marginTop:2,  height:1}} />
 
       </LinearGradient> 
      
@@ -84,10 +85,12 @@ const styles = StyleSheet.create({
   },
   avt: {
     alignSelf: 'center',
-    margin:50,
+    marginTop:45,
+    marginBottom:15,
    
   },
   main: {
+    paddingTop:30,
     flex:1,
     flexDirection:"row",
     flexWrap:"wrap",
