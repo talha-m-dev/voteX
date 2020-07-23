@@ -59,7 +59,7 @@ export default function E_Profile() {
                     value={'My Name'}
                 />
                 <Akira
-                    label={'First Name'}
+                    label={'Ph #'}
                     // this is used as active and passive border color
                     borderColor={'#a5d1cc'}
                     inputPadding={16}
@@ -68,7 +68,7 @@ export default function E_Profile() {
                     value={'My Name'}
                 />
                 <Akira
-                    label={'First Name'}
+                    label={'Address'}
                     // this is used as active and passive border color
                     borderColor={'#a5d1cc'}
                     inputPadding={16}
@@ -77,7 +77,7 @@ export default function E_Profile() {
                     value={'My Name'}
                 />
                 <Akira
-                    label={'First Name'}
+                    label={'Email'}
                     // this is used as active and passive border color
                     borderColor={'#a5d1cc'}
                     inputPadding={16}
