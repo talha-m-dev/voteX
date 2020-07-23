@@ -55,17 +55,17 @@ export default function E_Dashbord({navigation}) {
         <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_Org')}}>
           <Icon name="plus" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_Org')}}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('All_Org')}}>
           <Icon name="list-alt" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Add_org')}}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Verify_PO')}}>
           <Icon name="check-square-o" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('E_Profile')}}>
           <Icon name="id-badge" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card}>
-          <Icon name="comments" size={30} color="#900" />
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('E_Chats')}}>
+          <Icon name="comments" size={30} color="#000" />
         </TouchableOpacity>
         
       </View>
