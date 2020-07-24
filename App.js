@@ -24,7 +24,7 @@ const App=({navigation})=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home">
+        initialRouteName="E_Profile">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="E_Auth" component={E_Auth} />
         <Stack.Screen name="E_Register" component={E_Register} />

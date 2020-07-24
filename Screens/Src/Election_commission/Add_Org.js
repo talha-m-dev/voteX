@@ -59,7 +59,7 @@ export default function Add_Org() {
     </Overlay>
     <Image
     style={{ height: 100, width: 150, borderRadius: 2, }}
-    source={fileUri ? { uri: fileUri } : require('./assets/dummy.png')}
+    source={fileUri ? { uri: fileUri } : require('../assets/dummy.png')}
     />
     <TouchableOpacity style={styles.addPictureIcon} onPress={
     chooseImage

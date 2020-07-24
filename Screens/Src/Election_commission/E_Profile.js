@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import { StyleSheet, Image, TouchableOpacity,View } from 'react-native'
 import ImagePicker from 'react-native-image-picker';
 import Icon  from 'react-native-vector-icons/FontAwesome';
-import { Akira } from 'react-native-textinput-effects';
+import { Akira,Sae } from 'react-native-textinput-effects';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function E_Profile() {
@@ -33,7 +34,7 @@ export default function E_Profile() {
       var [fileUri, SetFileuri] = useState();
     
     return (
-        <View>
+        <View style={{backgroundColor:'#4BA3C3',flex:1}}>
             <View style={{
                 alignSelf: 'center',
                 marginTop: 35,
@@ -41,7 +42,7 @@ export default function E_Profile() {
                 <Image
                 style={{ height: 100, width: 100, borderRadius: 50, }}
                 source={fileUri ? { uri: fileUri } : // if clicked a new img
-                require('./assets/dummy.png')} //else show random
+                require('../assets/dummy.png')} //else show random
                 />
                 <TouchableOpacity style={styles.addPictureIcon} onPress={
                 chooseImage
@@ -49,50 +50,71 @@ export default function E_Profile() {
                 <Icon name="camera" size={20} />
                 </TouchableOpacity>
                 </View>
-                <Akira
-                    label={'First Name'}
-                    // this is used as active and passive border color
-                    borderColor={'#a5d1cc'}
+                <Sae
+                    label={'Email Address'}
+                    iconClass={FontAwesomeIcon}
+                    iconName={'pencil'}
+                    iconColor={'white'}
                     inputPadding={16}
                     labelHeight={24}
-                    labelStyle={{ color: '#ac83c4' }}
+                    // active border height
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={'none'}
+                    autoCorrect={false}
                     value={'My Name'}
                 />
-                <Akira
-                    label={'Ph #'}
-                    // this is used as active and passive border color
-                    borderColor={'#a5d1cc'}
+                <Sae
+                    label={'Email Address'}
+                    iconClass={FontAwesomeIcon}
+                    iconName={'pencil'}
+                    iconColor={'white'}
                     inputPadding={16}
                     labelHeight={24}
-                    labelStyle={{ color: '#ac83c4' }}
-                    value={'My Name'}
+                    // active border height
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={'none'}
+                    autoCorrect={false}
                 />
-                <Akira
-                    label={'Address'}
-                    // this is used as active and passive border color
-                    borderColor={'#a5d1cc'}
+                <Sae
+                    label={'Email Address'}
+                    iconClass={FontAwesomeIcon}
+                    iconName={'pencil'}
+                    iconColor={'white'}
                     inputPadding={16}
                     labelHeight={24}
-                    labelStyle={{ color: '#ac83c4' }}
-                    value={'My Name'}
+                    // active border height
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={'none'}
+                    autoCorrect={false}
                 />
-                <Akira
-                    label={'Email'}
-                    // this is used as active and passive border color
-                    borderColor={'#a5d1cc'}
+                <Sae
+                    label={'Email Address'}
+                    iconClass={FontAwesomeIcon}
+                    iconName={'pencil'}
+                    iconColor={'white'}
                     inputPadding={16}
                     labelHeight={24}
-                    labelStyle={{ color: '#ac83c4' }}
-                    value={'My Name'}
+                    // active border height
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={'none'}
+                    autoCorrect={false}
                 />
-                <Akira
-                    label={'First Name'}
-                    // this is used as active and passive border color
-                    borderColor={'#a5d1cc'}
+                <Sae
+                    label={'Email Address'}
+                    iconClass={FontAwesomeIcon}
+                    iconName={'pencil'}
+                    iconColor={'white'}
                     inputPadding={16}
                     labelHeight={24}
-                    labelStyle={{ color: '#ac83c4' }}
-                    value={'My Name'}
+                    // active border height
+                    borderHeight={2}
+                    // TextInput props
+                    autoCapitalize={'none'}
+                    autoCorrect={false}
                 />
   
                 
