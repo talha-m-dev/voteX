@@ -21,7 +21,7 @@ const Home = ({navigation}) => {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Details', {
+            navigation.navigate('E_Auth', {
               ref: 'Election Commission',
             });
           }}
@@ -33,7 +33,7 @@ const Home = ({navigation}) => {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Details', {
+            navigation.navigate('Auth', {
               ref: 'Presiding Officer',
             });
           }}
@@ -45,7 +45,7 @@ const Home = ({navigation}) => {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Details', {
+            navigation.navigate('Auth', {
               ref: 'Candidates',
             });
           }}
@@ -57,7 +57,7 @@ const Home = ({navigation}) => {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Details', {
+            navigation.navigate('Auth', {
               ref: 'Voters',
             });
           }}
