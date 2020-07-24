@@ -14,6 +14,8 @@ target 'voteX' do
 
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
 
+  pod 'react-native-date-picker', :path => '../node_modules/react-native-date-picker'
+
   target 'voteXTests' do
     inherit! :complete
     # Pods for testing
