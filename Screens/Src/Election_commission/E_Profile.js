@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { StyleSheet, Image, TouchableOpacity,View } from 'react-native'
 import ImagePicker from 'react-native-image-picker';
 import Icon  from 'react-native-vector-icons/FontAwesome';
-import { Akira,Sae } from 'react-native-textinput-effects';
+import { Sae } from 'react-native-textinput-effects';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
