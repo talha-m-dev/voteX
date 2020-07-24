@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const {height, width} = Dimensions.get('window');
 
-const Auth = ({route, navigation}) => {
+const E_Auth = ({route, navigation}) => {
   const {ref} = route.params;
   return (
     <View style={styles.container}>
@@ -24,7 +24,7 @@ const Auth = ({route, navigation}) => {
           title="Log in     "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('Login', {ref})}
+          onPress={() => navigation.navigate('E_Login', {ref})}
         />
         <Button
           buttonStyle={styles.btn}
@@ -32,7 +32,7 @@ const Auth = ({route, navigation}) => {
           title=" Register   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('Register', {ref})}
+          onPress={() => navigation.navigate('E_Register', {ref})}
         />
         <Button
           buttonStyle={styles.btn}
@@ -46,7 +46,7 @@ const Auth = ({route, navigation}) => {
   );
 };
 
-export default Auth;
+export default E_Auth;
 
 const styles = StyleSheet.create({
   container: {
