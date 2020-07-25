@@ -28,6 +28,9 @@ import All_VO from './Screens/Src/Presiding_Officer/All_VO';
 import Verify_VO from './Screens/Src/Presiding_Officer/Verify_VO';
 import P_Profile from './Screens/Src/Presiding_Officer/P_Profile';
 import P_Chats from './Screens/Src/Presiding_Officer/P_Chats';
+import Verify_C from './Screens/Src/Presiding_Officer/Verify_C';
+import All_C from './Screens/Src/Presiding_Officer/All_C';
+import P_Log_Out from './Screens/Src/Presiding_Officer/P_Log_Out';
 /*Voters*/
 
 
@@ -40,7 +43,7 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home">
+        initialRouteName="P_Dashbord">
           {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
           {/* Election Commission */}
@@ -56,7 +59,7 @@ const App=()=> {
         <Stack.Screen name="E_Chats" component={E_Chats} />
 
         {/*Presiding Officer*/}
-        {/*Candidates*/}
+        
         <Stack.Screen name="P_Auth" component={P_Auth} />
         <Stack.Screen name="P_Register" component={P_Register} />
         <Stack.Screen name="P_Login" component={P_Login} />
@@ -64,7 +67,13 @@ const App=()=> {
         <Stack.Screen name="All_VO" component={All_VO} />
         <Stack.Screen name="Verify_VO" component={Verify_VO} />
         <Stack.Screen name="P_Profile" component={P_Profile} />
+        <Stack.Screen name="All_C" component={All_C} />
+        <Stack.Screen name="Verify_C" component={Verify_C} />
+        <Stack.Screen name="P_Log_Out" component={P_Log_Out} />
         <Stack.Screen name="P_Chats" component={P_Chats} />
+
+        {/*Candidates*/}
+    
         {/*Voters*/}
       </Stack.Navigator>
     </NavigationContainer>
