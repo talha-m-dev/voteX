@@ -24,7 +24,7 @@ const P_Auth = ({route, navigation}) => {
           title="Log in     "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('E_Login', {ref})}
+          onPress={() => navigation.navigate('P_Login', {ref})}
         />
         <Button
           buttonStyle={styles.btn}
@@ -32,7 +32,7 @@ const P_Auth = ({route, navigation}) => {
           title=" Register   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('E_Register', {ref})}
+          onPress={() => navigation.navigate('P_Register', {ref})}
         />
         <Button
           buttonStyle={styles.btn}

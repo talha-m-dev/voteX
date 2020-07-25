@@ -38,7 +38,7 @@ const P_Login = ({route, navigation}) => {
           title=" Login   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('E_Dashbord')}
+          onPress={() => navigation.navigate('P_Dashbord')}
         />
         <Button
           buttonStyle={styles.btn}

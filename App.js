@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { Provider } from './Screens/Context/BlogContext';
 import Home from './Screens/Src/Home';
-import Intro from './Screens/Src/Intro';
+// import Intro from './Screens/Src/Intro';
 /*Election Commission*/
 import E_Auth from './Screens/Src/Election_commission/E_Auth';
 import E_Register from './Screens/Src/Election_commission/E_Register';
@@ -40,10 +40,10 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="E_Profile">
-          <Stack.Screen name="Intro" component={Intro} />
+        initialRouteName="Home">
+          {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
-          {/*Election Commission*/}
+          {/* Election Commission */}
         <Stack.Screen name="E_Auth" component={E_Auth} />
         <Stack.Screen name="E_Register" component={E_Register} />
         <Stack.Screen name="E_Login" component={E_Login} />
