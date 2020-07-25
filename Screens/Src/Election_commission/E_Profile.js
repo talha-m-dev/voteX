@@ -1,139 +1,93 @@
-import React, {useState} from 'react'
-import { StyleSheet, Image, TouchableOpacity,View } from 'react-native'
-import ImagePicker from 'react-native-image-picker';
-import Icon  from 'react-native-vector-icons/FontAwesome';
-import { Sae } from 'react-native-textinput-effects';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity
+} from 'react-native';
 
-
-export default function E_Profile() {
-    const chooseImage = () => {
-        let options = {
-        title: 'Select Avatar', 
-        cameraType: 'front',
-        mediaType: 'photo' ,
-        storageOptions: {
-        skipBackup: true,
-        path: 'images',
-        },
-        };
-        ImagePicker.showImagePicker(options, (response) => {
-        console.log('Response = ', response);
-        if (response.didCancel) {
-        console.log('User cancelled image picker');
-        } else if (response.error) {
-        console.log('ImagePicker Error: ', response.error);
-        } else if (response.customButton) {
-        console.log('User tapped custom button: ', response.customButton);
-        alert(response.customButton);
-        } else {
-        SetFileuri(response.uri) 
-        }
-        });
-        }
-      var [fileUri, SetFileuri] = useState();
-    
-    return (
-        <View style={{backgroundColor:'#4BA3C3',flex:1}}>
-            <View style={{
-                alignSelf: 'center',
-                marginTop: 35,
-                }}>
-                <Image
-                style={{ height: 100, width: 100, borderRadius: 50, }}
-                source={fileUri ? { uri: fileUri } : // if clicked a new img
-                require('../assets/dummy.png')} //else show random
-                />
-                <TouchableOpacity style={styles.addPictureIcon} onPress={
-                chooseImage
-                }>
-                <Icon name="camera" size={20} />
-                </TouchableOpacity>
-                </View>
-                <Sae
-                    label={'Email Address'}
-                    iconClass={FontAwesomeIcon}
-                    iconName={'pencil'}
-                    iconColor={'white'}
-                    inputPadding={16}
-                    labelHeight={24}
-                    // active border height
-                    borderHeight={2}
-                    // TextInput props
-                    autoCapitalize={'none'}
-                    autoCorrect={false}
-                    value={'My Name'}
-                />
-                <Sae
-                    label={'Email Address'}
-                    iconClass={FontAwesomeIcon}
-                    iconName={'pencil'}
-                    iconColor={'white'}
-                    inputPadding={16}
-                    labelHeight={24}
-                    // active border height
-                    borderHeight={2}
-                    // TextInput props
-                    autoCapitalize={'none'}
-                    autoCorrect={false}
-                />
-                <Sae
-                    label={'Email Address'}
-                    iconClass={FontAwesomeIcon}
-                    iconName={'pencil'}
-                    iconColor={'white'}
-                    inputPadding={16}
-                    labelHeight={24}
-                    // active border height
-                    borderHeight={2}
-                    // TextInput props
-                    autoCapitalize={'none'}
-                    autoCorrect={false}
-                />
-                <Sae
-                    label={'Email Address'}
-                    iconClass={FontAwesomeIcon}
-                    iconName={'pencil'}
-                    iconColor={'white'}
-                    inputPadding={16}
-                    labelHeight={24}
-                    // active border height
-                    borderHeight={2}
-                    // TextInput props
-                    autoCapitalize={'none'}
-                    autoCorrect={false}
-                />
-                <Sae
-                    label={'Email Address'}
-                    iconClass={FontAwesomeIcon}
-                    iconName={'pencil'}
-                    iconColor={'white'}
-                    inputPadding={16}
-                    labelHeight={24}
-                    // active border height
-                    borderHeight={2}
-                    // TextInput props
-                    autoCapitalize={'none'}
-                    autoCorrect={false}
-                />
+export default function E_Profile () {
   
-                
-            
+    return (
+      <View style={styles.container}>
+          <View style={styles.header}></View>
+          <Image style={styles.avatar} source={{
+            uri:
+              'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+          }}/>
+          <View style={styles.body}>
+            <View style={styles.bodyContent}>
+              <Text style={styles.name}>John Doe</Text>
+              <Text style={styles.info}>UX Designer / Mobile developer</Text>
+              <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
+              
+              <TouchableOpacity style={styles.buttonContainer}>
+                <Text>Edit Profile</Text>  
+              </TouchableOpacity>              
+              
+            </View>
         </View>
-    )
-}
+      </View>
+    );
+  }
+
 
 const styles = StyleSheet.create({
-    addPictureIcon: {
-        height: 30,
-        width: 30,
-        backgroundColor: 'white',
-        borderRadius: 50,
-        position: 'absolute',
-        left: 65,
-        top: 75,
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignItems: 'center',
-        }
-})
+  header:{
+    backgroundColor: "#4BA3C3",
+    height:200,
+  },
+  avatar: {
+    width: 130,
+    height: 130,
+    borderRadius: 63,
+    borderWidth: 4,
+    borderColor: "white",
+    marginBottom:10,
+    alignSelf:'center',
+    position: 'absolute',
+    marginTop:130
+  },
+  name:{
+    fontSize:22,
+    color:"#FFFFFF",
+    fontWeight:'600',
+  },
+  body:{
+    marginTop:40,
+  },
+  bodyContent: {
+    flex: 1,
+    alignItems: 'center',
+    padding:30,
+  },
+  name:{
+    fontSize:28,
+    color: "#4BA3C3",
+    fontWeight: "600"
+  },
+  info:{
+    fontSize:16,
+    color: "#00BFFF",
+    marginTop:10
+  },
+  description:{
+    fontSize:16,
+    color: "#696969",
+    marginTop:10,
+    textAlign: 'center'
+  },
+  buttonContainer: {
+    marginTop:10,
+    height:45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:20,
+    width:250,
+    borderRadius:30,
+    backgroundColor: "#4BA3C3",
+  },
+});
+ 

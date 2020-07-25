@@ -21,7 +21,7 @@ export default function E_Dashbord({navigation}) {
        locations={[1,0]}
        colors={['#4BA3C3',  '#FFF']}
         > 
-        {/*   <View style={styles.lngrd}>*/}
+        
         <Avatar
           containerStyle={styles.avt}
           showEditButton={true}
@@ -31,6 +31,7 @@ export default function E_Dashbord({navigation}) {
           }}
           size="xlarge"
           rounded
+          onPres={()=>navigation.naigate('E_Profile')}
         />
         <View
           style={{
@@ -62,7 +63,7 @@ export default function E_Dashbord({navigation}) {
         <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('Verify_PO')}}>
           <Icon name="check-square-o" size={30} color="#000" />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('E_Profile')}}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('E_Profile_Edit')}}>
           <Icon name="id-badge" size={30} color="#000" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('E_Chats')}}>

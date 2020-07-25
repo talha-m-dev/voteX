@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import { Provider } from './Screens/Context/BlogContext';
 import Home from './Screens/Src/Home';
+import Intro from './Screens/Src/Intro';
 /*Election Commission*/
 import E_Auth from './Screens/Src/Election_commission/E_Auth';
 import E_Register from './Screens/Src/Election_commission/E_Register';
@@ -12,8 +13,9 @@ import E_Dashbord from './Screens/Src/Election_commission/E_Dashbord';
 import Add_Org from './Screens/Src/Election_commission/Add_Org';
 import All_Org from './Screens/Src/Election_commission/All_Org';
 import Verify_PO from './Screens/Src/Election_commission/Verify_PO';
-import E_Profile from './Screens/Src/Election_commission/E_Profile';
+import E_Profile_Edit from './Screens/Src/Election_commission/E_Profile_Edit';
 import E_Chats from './Screens/Src/Election_commission/E_Chats';
+import E_Profile from './Screens/Src/Election_commission/E_Profile';
 /*Presiding Officer*/
 
 /*Candidates*/
@@ -38,7 +40,8 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home">
+        initialRouteName="E_Profile">
+          <Stack.Screen name="Intro" component={Intro} />
           <Stack.Screen name="Home" component={Home} />
           {/*Election Commission*/}
         <Stack.Screen name="E_Auth" component={E_Auth} />
@@ -48,6 +51,7 @@ const App=()=> {
         <Stack.Screen name="Add_Org" component={Add_Org} />
         <Stack.Screen name="All_Org" component={All_Org} />
         <Stack.Screen name="Verify_PO" component={Verify_PO} />
+        <Stack.Screen name="E_Profile_Edit" component={E_Profile_Edit} />
         <Stack.Screen name="E_Profile" component={E_Profile} />
         <Stack.Screen name="E_Chats" component={E_Chats} />
 
