@@ -7,19 +7,17 @@ import {
   Button,
   TouchableOpacity,
   Image,
-  Alert
+  Alert,
+  Dimensions,
 } from 'react-native';
 
+
+const {height,width}= Dimensions.get('window');
+
 export default function Apply_C() {
-
-
-
-
  const onClickListener = (viewId) => {
     Alert.alert("Alert", "Button pressed "+viewId);
   }
-
-  
     return (
       <View style={styles.container}>
         <Image style={styles.bgImage} source={require('./back.jpg')}/>
@@ -66,21 +64,21 @@ export default function Apply_C() {
   }
 
 
-const resizeMode = 'center';
+// const resizeMode = 'center';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: '#4BA3C3',
   },
   bgImage:{
     flex: 1,
-    resizeMode,
+    
     position: 'absolute',
-    width: '100%',
-    height: '100%',
+    width: width,
+    height: height,
     justifyContent: 'center',
   },
   inputContainer: {
