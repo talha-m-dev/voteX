@@ -12,14 +12,14 @@ export default function P_Dashbord ({navigation}) {
     return (
       <View style={styles.container}>
           <View style={styles.header}>
-            <View style={styles.headerContent}>
+            <TouchableOpacity style={styles.headerContent} onPress={()=>navigation.navigate('P_Profile_Edit')}>
                 <Image style={styles.avatar}
                   source={{uri: 'https://bootdey.com/img/Content/avatar/avatar1.png'}}/>
 
                 <Text style={styles.name}>
                   John Doe
                 </Text>
-            </View>
+            </TouchableOpacity>
           </View>
 
           <View style={styles.body}>
