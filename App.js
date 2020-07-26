@@ -42,6 +42,10 @@ import C_Auth from './Screens/Src/Candidate/C_Auth';
 
 /*Voters*/
 
+import V_Register from './Screens/Src/Voter/V_Register';
+import V_Login from './Screens/Src/Voter/V_Login';
+import V_Dashbord from './Screens/Src/Voter/V_Dashbord';
+import V_Auth from './Screens/Src/Voter/V_Auth';
 
 const Stack = createStackNavigator();
 
@@ -52,7 +56,7 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="C_Dashbord">
+        initialRouteName="Home">
           {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
           {/* Election Commission */}
@@ -87,13 +91,17 @@ const App=()=> {
         
         <Stack.Screen name="C_Auth" component={C_Auth} />
         <Stack.Screen name="C_Dashbord" component={C_Dashbord} />
-       
         <Stack.Screen name="C_Login" component={C_Login} />
-       
         <Stack.Screen name="C_Register" component={C_Register} />
         
     
         {/*Voters*/}
+
+        <Stack.Screen name="V_Auth" component={V_Auth} />
+        <Stack.Screen name="V_Dashbord" component={V_Dashbord} />
+        <Stack.Screen name="V_Login" component={V_Login} />
+        <Stack.Screen name="V_Register" component={V_Register} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

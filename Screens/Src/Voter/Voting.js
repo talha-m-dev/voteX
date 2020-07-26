@@ -14,7 +14,7 @@ import {
 
 const {height,width}= Dimensions.get('window');
 
-export default function Apply_C() {
+export default function Voting() {
  const onClickListener = (viewId) => {
     Alert.alert("Alert", "Button pressed "+viewId);
   }

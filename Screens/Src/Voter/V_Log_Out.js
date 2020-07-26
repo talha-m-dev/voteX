@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function P_Log_Out() {
+export default function V_Log_Out() {
     return (
         <View>
             <Text></Text>

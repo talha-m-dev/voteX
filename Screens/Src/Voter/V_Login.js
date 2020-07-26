@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button} from 'react-native-elements';
 import {Fumi} from 'react-native-textinput-effects';
 
-const P_Login = ({route, navigation}) => {
+const V_Login = ({route, navigation}) => {
   const {ref} = route.params;
   return (
     <View style={styles.container}>
@@ -38,7 +38,7 @@ const P_Login = ({route, navigation}) => {
           title=" Login   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('P_Dashbord')}
+          onPress={() => navigation.navigate('C_Dashbord')}
         />
         <Button
           buttonStyle={styles.btn}
@@ -52,7 +52,7 @@ const P_Login = ({route, navigation}) => {
   );
 };
 
-export default P_Login;
+export default V_Login;
 
 const styles = StyleSheet.create({
   container: {
