@@ -40,13 +40,16 @@ export default function E_Dashbord({navigation}) {
           borderLeftColor: 'red',
           }}
         />
-        <Text style={styles.text,{alignSelf:"center",fontSize:30,marginBottom:20,}}>My Name</Text>
+        <Text style={styles.text,{alignSelf:"center",fontSize:30,marginBottom:20,}}>Talha MAnzoor</Text>
           <View style={{flexDirection:'row',justifyContent:'space-around', }}>
-          <Text style={styles.text}>58</Text>
+          <Text style={styles.text}>1{'\n'}<Text style={styles.subtext}>Orgnization</Text></Text>
+          
           <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
-          <Text style={styles.text}>58</Text>
+          <Text style={styles.text}>4{'\n'}<Text style={styles.subtext}>P.O</Text></Text>
         <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
-        <Text style={styles.text}>58</Text>
+        <Text style={styles.text}>9{'\n'}<Text style={styles.subtext}>Candidtes</Text></Text>
+        <Divider style={{ backgroundColor: '#4BA3C3',height:50,width:1 }} />
+        <Text style={styles.text}>48{'\n'}<Text style={styles.subtext}>Voters</Text></Text>
           </View>
         
         <Divider style={{ backgroundColor: '#4BA3C3',marginTop:2,  height:1}} />
@@ -81,12 +84,15 @@ const styles = StyleSheet.create({
   container: {
    flex:1,
   },
+  subtext:{
+    fontSize:15
+  },
   lngrd:{
    flex:1
   },
   avt: {
     alignSelf: 'center',
-    marginTop:45,
+    marginTop:30,
     marginBottom:15,
    
   },

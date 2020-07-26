@@ -39,7 +39,7 @@ export default function Apply_C() {
         </View>
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
-              placeholder="Email"
+              placeholder="Password"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
               onChangeText={() =>{}}/>
@@ -47,7 +47,7 @@ export default function Apply_C() {
         </View>
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
-              placeholder="Email"
+              placeholder="PH #"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
               onChangeText={() =>{}}/>
@@ -55,7 +55,7 @@ export default function Apply_C() {
         </View>
         <View style={styles.inputContainer}>
           <TextInput style={styles.inputs}
-              placeholder="Email"
+              placeholder="Address"
               keyboardType="email-address"
               underlineColorAndroid='transparent'
               onChangeText={() =>{}}/>
@@ -72,7 +72,7 @@ export default function Apply_C() {
         </View>
 
         <TouchableOpacity style={styles.btnByRegister} onPress={() => this.onClickListener('restore_password')}>
-            <Text style={styles.textByRegister}>By registering on this App you confirm that you have read and accept our policy</Text>
+            <Text style={styles.textByRegister}>By registering as Candidate you confirm that you have read and accept our policy</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} onPress={() => onClickListener('login')}>
@@ -80,9 +80,9 @@ export default function Apply_C() {
         </TouchableOpacity>
 
 
-        <TouchableOpacity style={styles.buttonContainer} onPress={() => onClickListener('register')}>
+        {/* <TouchableOpacity style={styles.buttonContainer} onPress={() => onClickListener('register')}>
             <Text style={styles.btnText}>Have an account?</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     );
   }

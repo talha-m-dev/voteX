@@ -13,8 +13,12 @@ import {
 export default function All_C() {
 const [data, setdata] = useState([
         
-    {id:1, title: "Option 2", image:"https://img.icons8.com/color/70/000000/administrator-male.png"},
-    {id:2, title: "Option 3", image:"https://img.icons8.com/color/70/000000/filled-like.png"} ,]);
+    {id:1, title: "Candidate 1", image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"},
+    {id:1, title: "Candidate 2", image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"},
+    {id:1, title: "Candidate 3", image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"},
+    {id:1, title: "Candidate 4", image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"},
+    {id:1, title: "Candidate 5", image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg"},
+     ]);
  
 
   clickEventListener=(item)=> {

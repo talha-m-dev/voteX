@@ -56,8 +56,9 @@ const App=()=> {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          headerStyle: { backgroundColor: 'papayawhip' }
         }}
-        initialRouteName="E_Chats">
+        initialRouteName="Home">
           {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
           {/* Election Commission */}

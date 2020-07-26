@@ -15,12 +15,11 @@ export default function Verify_C() {
   
 
  const [data, setdata] = useState([
-  {id:1,  name: "Comunity",   image:"https://img.icons8.com/clouds/100/000000/groups.png",           count:124.711},
-  {id:2,  name: "Housing",    image:"https://img.icons8.com/color/100/000000/real-estate.png",       count:234.722},
-  {id:3,  name: "Jobs",       image:"https://img.icons8.com/color/100/000000/find-matching-job.png", count:324.723} ,
-  {id:4,  name: "Personal",   image:"https://img.icons8.com/clouds/100/000000/employee-card.png",    count:154.573} ,
-  {id:5,  name: "For sale",   image:"https://img.icons8.com/color/100/000000/land-sales.png",        count:124.678} ,
-  {id:6,  name: "For my sale",   image:"https://img.icons8.com/color/100/000000/land-sales.png",        count:124.678} ,
+  {id:1,  name: "Talha",   image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",           count:+923039509454},
+  {id:2,  name: "Hassaan",    image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",       count:3039509454},
+  {id:3,  name: "My Friend",       image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg", count:3039509454} ,
+  {id:4,  name: "Persona 4",   image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",    count:3039509454} ,
+  {id:5,  name: "Persona 5",   image:"https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",    count:3039509454} ,
 ])
  
 

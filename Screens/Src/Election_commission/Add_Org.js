@@ -59,7 +59,7 @@ export default function Add_Org() {
     </Overlay>
     <Image
     style={{ height: 100, width: 150, borderRadius: 2, }}
-    source={fileUri ? { uri: fileUri } : require('../assets/dummy.png')}
+    source={fileUri ? { uri: fileUri } : require('../assets/dum.jpg')}
     />
     <TouchableOpacity style={styles.addPictureIcon} onPress={
     chooseImage
@@ -74,11 +74,17 @@ export default function Add_Org() {
     inputPadding={16}
       />
       <Kaede
-        label={'Adress'}
+        label={'Candidate Post'}
         inputPadding={16}
       />
       <Kaede
-        label={'Ph #'}
+        label={'Adress'}
+        inputPadding={16}
+      />
+      
+      
+      <Kaede
+        label={'Description'}
         inputPadding={16}
       />
     </View>
@@ -87,23 +93,14 @@ export default function Add_Org() {
     <Button
           buttonStyle={styles.btn}
           icon={<Icon name="check" size={25} color="black" />}
-          title=" Voting Starting Time  "
+          title=" Voting Time  "
           type="outline"
           iconRight={true}
           onPress={() => {
             setoverlay(true);
           }}
         />
-    <Button
-          buttonStyle={styles.btn}
-          icon={<Icon name="check" size={25} color="black" />}
-          title=" Voting Ending Time  "
-          type="outline"
-          iconRight={true}
-          onPress={() => {
-            setoverlay(true);
-          }}
-        />
+    
     <Button
           buttonStyle={styles.btn}
           icon={<Icon name="check" size={25} color="black" />}
@@ -142,10 +139,10 @@ const styles = StyleSheet.create({
     btn_con: {
       flex: 1,
       padding: 70,
-      justifyContent: 'space-around',
+      justifyContent: 'space-between',
     },
     btn: {
-      marginTop:2,
+      marginTop:10,
       paddingVertical: 25,
       
       backgroundColor:'#fff',

@@ -40,7 +40,7 @@ const chooseImage = () => {
     }
     });
     }
-  var [fileUri, SetFileuri] = useState();
+  var [fileUri, SetFileuri] = useState('https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg');
   const onClickListener = (viewId) => {
     Alert.alert("Alert", "Button pressed "+viewId);
   }
@@ -53,7 +53,7 @@ const chooseImage = () => {
                 }}>
                 <Image
                 style={{ height: 100, width: 100, borderRadius: 50, }}
-                source={fileUri ? { uri: fileUri } : // if clicked a new img
+                source={fileUri ? { uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg' } : // if clicked a new img
                 require('../assets/dummy.png')} //else show random
                 />
                 <TouchableOpacity style={styles.addPictureIcon} onPress={
@@ -64,11 +64,12 @@ const chooseImage = () => {
                 </View>
 
         <View style={styles.inputContainer}>
-          <Image style={styles.inputIcon} source={{uri: 'https://png.icons8.com/user/ultraviolet/50/3498db'}}/>
+          <Image style={styles.inputIcon} source={{uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/18.jpg'}}/>
           <TextInput style={styles.inputs}
               placeholder="Name"
               underlineColorAndroid='transparent'
-              onChangeText={(email) => onClickListener({email})}/>
+              // onChangeText={(email) => onClickListener({email})}
+              />
         </View>
         
         <View style={styles.inputContainer}>
@@ -76,7 +77,8 @@ const chooseImage = () => {
           <TextInput style={styles.inputs}
               placeholder="Email"
               underlineColorAndroid='transparent'
-              onChangeText={(password) =>onClickListener({password})}/>
+              // onChangeText={(password) =>onClickListener({password})}
+              />
         </View>
 
         
@@ -85,11 +87,12 @@ const chooseImage = () => {
           <TextInput style={[ styles.messageInput]}
               placeholder="Message"
               underlineColorAndroid='transparent'
-              onChangeText={(password) => onClickListener({password})}/>
+              // onChangeText={(password) => onClickListener({password})}
+              />
         </View>
 
         <TouchableHighlight style={[styles.buttonContainer, styles.sendButton]} onPress={() => onClickListener()}>
-          <Text style={styles.buttonText}>Send</Text>
+          <Text style={styles.buttonText}>Update</Text>
         </TouchableHighlight>
       </View>
     );

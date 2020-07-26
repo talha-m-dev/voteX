@@ -14,10 +14,10 @@ export default function P_Dashbord ({navigation}) {
           <View style={styles.header}>
             <TouchableOpacity style={styles.headerContent} onPress={()=>navigation.navigate('P_Profile_Edit')}>
                 <Image style={styles.avatar}
-                  source={{uri: 'https://bootdey.com/img/Content/avatar/avatar1.png'}}/>
+                  source={{uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg'}}/>
 
                 <Text style={styles.name}>
-                  John Doe
+                  Talha Manzoor
                 </Text>
             </TouchableOpacity>
           </View>
@@ -73,7 +73,7 @@ export default function P_Dashbord ({navigation}) {
 
 const styles = StyleSheet.create({
   header:{
-    backgroundColor: "#00BFFF",
+    backgroundColor: "#4BA3C3",
   },
   headerContent:{
     padding:30,

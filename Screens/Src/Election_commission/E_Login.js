@@ -12,24 +12,7 @@ const E_Login = ({route, navigation}) => {
       <View>
         <Text style={styles.mainheading}>Login as {ref} </Text>
       </View>
-      <Fumi
-        label={'Email'}
-        iconClass={FontAwesomeIcon}
-        iconName={'envelope-o'}
-        iconColor={'#4BA3C3'}
-        iconSize={20}
-        iconWidth={40}
-        inputPadding={16}
-      />
-      <Fumi
-        label={'Password'}
-        iconClass={FontAwesomeIcon}
-        iconName={'meh-o'}
-        iconColor={'#4BA3C3'}
-        iconSize={20}
-        iconWidth={40}
-        inputPadding={16}
-      />
+     
 
       <View style={styles.btnstyl}>
         <Button
