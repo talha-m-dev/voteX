@@ -1,129 +1,170 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
   View,
+  TextInput,
+  Button,
   TouchableOpacity,
   Image,
-  Alert,
-  ScrollView,
-  FlatList,
+  Alert
 } from 'react-native';
 
 export default function Apply_C() {
-    const [data, setdata] = useState([
-        
-        {id:1, title: "Option 2", image:"https://img.icons8.com/color/70/000000/administrator-male.png"},
-        {id:2, title: "Option 3", image:"https://img.icons8.com/color/70/000000/filled-like.png"} ,
-        {id:3, title: "Option 4", image:"https://img.icons8.com/color/70/000000/facebook-like.png"} ,
-        {id:4, title: "Option 5", image:"https://img.icons8.com/color/70/000000/shutdown.png"} ,
-        {id:5, title: "Option 6", image:"https://img.icons8.com/color/70/000000/traffic-jam.png"} ,
-        {id:6, title: "Option 7", image:"https://img.icons8.com/dusk/70/000000/visual-game-boy.png"} ,
-        {id:8, title: "Option 8", image:"https://img.icons8.com/flat_round/70/000000/cow.png"} ,
-        {id:9, title: "Option 9", image:"https://img.icons8.com/color/70/000000/coworking.png"} ,
-        
-      ]);
-    //   const [overlay, setoverlay] = useState(false);
 
- 
 
-  const clickEventListener=(id) =>{
-  
-        }
-    
-  
+
+
+ const onClickListener = (viewId) => {
+    Alert.alert("Alert", "Button pressed "+viewId);
+  }
 
   
     return (
       <View style={styles.container}>
-          
-        <FlatList style={styles.list}
-          contentContainerStyle={styles.listContainer}
-          data={data}
-          horizontal={false}
-          numColumns={2}
-          keyExtractor= {(item) => {
-            return item.id;
-          }}
-          renderItem={({item}) => {
-            return (
-              <TouchableOpacity style={styles.card} onPress={() => {clickEventListener(item.id)}}>
-                <View style={styles.cardFooter}></View>
-                <Image style={styles.cardImage} source={{uri:item.image}}/>
-                <View style={styles.cardHeader}>
-                  <View style={{alignItems:"center", justifyContent:"center"}}>
-                    <Text style={styles.title}>{item.title}</Text>
-                    
-                  </View>
-                </View>
-              </TouchableOpacity>
-            )
-          }}/>
+        <Image style={styles.bgImage} source={require('./back.jpg')}/>
+        <View style={styles.inputContainer}>
+          <TextInput style={styles.inputs}
+              placeholder="Full name"
+              underlineColorAndroid='transparent'
+              onChangeText={() =>{}}/>
+          <Image style={styles.inputIcon} source={{uri: 'https://img.icons8.com/color/40/000000/circled-user-male-skin-type-3.png'}}/>
+        </View>
+
+        <View style={styles.inputContainer}>
+          <TextInput style={styles.inputs}
+              placeholder="Email"
+              keyboardType="email-address"
+              underlineColorAndroid='transparent'
+              onChangeText={() =>{}}/>
+          <Image style={styles.inputIcon} source={{uri: 'https://img.icons8.com/flat_round/40/000000/secured-letter.png'}}/>
+        </View>
+        
+        <View style={styles.inputContainer}>
+          <TextInput style={styles.inputs}
+              placeholder="Password"
+              secureTextEntry={true}
+              underlineColorAndroid='transparent'
+             />
+          <Image style={styles.inputIcon} source={{uri: 'https://img.icons8.com/color/40/000000/password.png'}}/>
+        </View>
+
+        <TouchableOpacity style={styles.btnByRegister} onPress={() => this.onClickListener('restore_password')}>
+            <Text style={styles.textByRegister}>By registering on this App you confirm that you have read and accept our policy</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} onPress={() => onClickListener('login')}>
+          <Text style={styles.loginText}>Apply For Candidates</Text>
+        </TouchableOpacity>
+
+
+        <TouchableOpacity style={styles.buttonContainer} onPress={() => onClickListener('register')}>
+            <Text style={styles.btnText}>Have an account?</Text>
+        </TouchableOpacity>
       </View>
     );
   }
 
 
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    marginTop:20,
-  },
-  list: {
-    paddingHorizontal: 5,
-    backgroundColor:"#E6E6E6",
-  },
-  listContainer:{
-    alignItems:'center'
-  },
-  /******** card **************/
-  card:{
-    shadowColor: '#00000021',
+const resizeMode = 'center';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  bgImage:{
+    flex: 1,
+    resizeMode,
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+  },
+  inputContainer: {
+    borderBottomColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
+    borderRadius:30,
+    borderBottomWidth: 1,
+    width:300,
+    height:45,
+    marginBottom:20,
+    flexDirection: 'row',
+    alignItems:'center',
+
+    shadowColor: "#808080",
     shadowOffset: {
       width: 0,
-      height: 6,
+      height: 2,
     },
-    shadowOpacity: 0.37,
-    shadowRadius: 7.49,
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
 
-    elevation: 12,
-    marginVertical: 10,
-    backgroundColor:"white",
-    flexBasis: '42%',
-    marginHorizontal: 10,
+    elevation: 5,
   },
-  cardHeader: {
-    paddingVertical: 17,
-    paddingHorizontal: 16,
-    borderTopLeftRadius: 1,
-    borderTopRightRadius: 1,
-    flexDirection: 'row',
-    alignItems:"center", 
-    justifyContent:"center"
-  },
-  cardContent: {
-    paddingVertical: 12.5,
-    paddingHorizontal: 16,
-  },
-  cardFooter:{
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingTop: 12.5,
-    paddingBottom: 25,
-    paddingHorizontal: 16,
-    borderBottomLeftRadius: 1,
-    borderBottomRightRadius: 1,
-  },
-  cardImage:{
-    height: 70,
-    width: 70,
-    alignSelf:'center'
-  },
-  title:{
-    fontSize:18,
+  inputs:{
+    height:45,
+    marginLeft:16,
+    borderBottomColor: '#FFFFFF',
     flex:1,
-    alignSelf:'center',
-    color:"#696969"
   },
-});    
+  inputIcon:{
+    width:30,
+    height:30,
+    marginRight:15,
+    justifyContent: 'center'
+  },
+  buttonContainer: {
+    height:45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:20,
+    width:300,
+    borderRadius:30,
+    backgroundColor:'transparent'
+  },
+  btnByRegister: {
+    height:15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical:20,
+    width:300,
+    backgroundColor:'transparent'
+  },
+  loginButton: {
+    backgroundColor: "#00b5ec",
+
+    shadowColor: "#808080",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.50,
+    shadowRadius: 12.35,
+
+    elevation: 19,
+  },
+  loginText: {
+    color: 'white',
+  },
+  btnText:{
+    color:"white",
+    fontWeight:'bold',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+  },
+  textByRegister:{
+    color:"white",
+    fontWeight:'bold',
+    textAlign:'center',
+
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10
+  }
+});  

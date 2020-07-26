@@ -52,7 +52,7 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home">
+        initialRouteName="C_Dashbord">
           {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
           {/* Election Commission */}
