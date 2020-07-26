@@ -45,7 +45,7 @@ const Home = ({navigation}) => {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Auth', {
+            navigation.navigate('C_Auth', {
               ref: 'Candidates',
             });
           }}

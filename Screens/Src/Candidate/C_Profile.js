@@ -6,7 +6,7 @@ import { Sae } from 'react-native-textinput-effects';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 
 
-export default function P_Profile() {
+export default function C_Profile() {
     const chooseImage = () => {
         let options = {
         title: 'Select Avatar', 

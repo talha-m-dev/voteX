@@ -15,7 +15,7 @@ const list = [
   },
 ]
 
-export default function P_Chats() {
+export default function C_Chats() {
     return (
         <View>
             {

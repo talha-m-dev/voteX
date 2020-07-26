@@ -16,9 +16,8 @@ import Verify_PO from './Screens/Src/Election_commission/Verify_PO';
 import E_Profile_Edit from './Screens/Src/Election_commission/E_Profile_Edit';
 import E_Chats from './Screens/Src/Election_commission/E_Chats';
 import E_Profile from './Screens/Src/Election_commission/E_Profile';
-/*Presiding Officer*/
 
-/*Candidates*/
+/*Presiding Officer*/
 
 import P_Auth from './Screens/Src/Presiding_Officer/P_Auth';
 import P_Register from './Screens/Src/Presiding_Officer/P_Register';
@@ -32,6 +31,15 @@ import P_Chats from './Screens/Src/Presiding_Officer/P_Chats';
 import Verify_C from './Screens/Src/Presiding_Officer/Verify_C';
 import All_C from './Screens/Src/Presiding_Officer/All_C';
 import P_Log_Out from './Screens/Src/Presiding_Officer/P_Log_Out';
+
+/*Candidates*/
+
+import C_Register from './Screens/Src/Candidate/C_Register';
+import C_Login from './Screens/Src/Candidate/C_Login';
+import C_Dashbord from './Screens/Src/Candidate/C_Dashbord';
+import C_Auth from './Screens/Src/Candidate/C_Auth';
+
+
 /*Voters*/
 
 
@@ -75,6 +83,15 @@ const App=()=> {
         <Stack.Screen name="P_Chats" component={P_Chats} />
 
         {/*Candidates*/}
+
+        
+        <Stack.Screen name="C_Auth" component={C_Auth} />
+        <Stack.Screen name="C_Dashbord" component={C_Dashbord} />
+       
+        <Stack.Screen name="C_Login" component={C_Login} />
+       
+        <Stack.Screen name="C_Register" component={C_Register} />
+        
     
         {/*Voters*/}
       </Stack.Navigator>

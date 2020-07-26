@@ -9,8 +9,8 @@ import {
   ScrollView,
   FlatList,
 } from 'react-native';
-import Moverlay from './Moverlay'
-export default function Verify_C() {
+
+export default function Apply_C() {
     const [data, setdata] = useState([
         
         {id:1, title: "Option 2", image:"https://img.icons8.com/color/70/000000/administrator-male.png"},
@@ -28,7 +28,7 @@ export default function Verify_C() {
  
 
   const clickEventListener=(id) =>{
-    <Moverlay id={id}/>
+  
         }
     
   
