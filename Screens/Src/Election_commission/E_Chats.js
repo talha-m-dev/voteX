@@ -15,7 +15,7 @@ const list = [
   },
 ]
 
-export default function E_Chats() {
+export default function E_Chats({navigation}) {
     return (
         <View>
             {
@@ -27,6 +27,7 @@ export default function E_Chats() {
                 subtitle={l.subtitle}
                 bottomDivider
                 badge={{ value: 3, textStyle: { color: 'orange' }, containerStyle: { marginTop: -20 } }}
+                onPress={()=>{navigation.navigate('E_messages',{l})}}
             />
             ))
         }

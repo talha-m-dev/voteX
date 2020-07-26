@@ -16,6 +16,7 @@ import Verify_PO from './Screens/Src/Election_commission/Verify_PO';
 import E_Profile_Edit from './Screens/Src/Election_commission/E_Profile_Edit';
 import E_Chats from './Screens/Src/Election_commission/E_Chats';
 import E_Profile from './Screens/Src/Election_commission/E_Profile';
+import E_messages from './Screens/Src/Election_commission/E_messages';
 
 /*Presiding Officer*/
 
@@ -56,7 +57,7 @@ const App=()=> {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName="Home">
+        initialRouteName="E_Chats">
           {/* <Stack.Screen name="Intro" component={Intro} /> */}
           <Stack.Screen name="Home" component={Home} />
           {/* Election Commission */}
@@ -70,6 +71,7 @@ const App=()=> {
         <Stack.Screen name="E_Profile_Edit" component={E_Profile_Edit} />
         <Stack.Screen name="E_Profile" component={E_Profile} />
         <Stack.Screen name="E_Chats" component={E_Chats} />
+        <Stack.Screen name="E_messages" component={E_messages} />
 
         {/*Presiding Officer*/}
         
