@@ -27,6 +27,7 @@ import P_Dashbord from './Screens/Src/Presiding_Officer/P_Dashbord';
 import All_VO from './Screens/Src/Presiding_Officer/All_VO';
 import Verify_VO from './Screens/Src/Presiding_Officer/Verify_VO';
 import P_Profile from './Screens/Src/Presiding_Officer/P_Profile';
+import P_Profile_Edit from './Screens/Src/Presiding_Officer/P_Profile_Edit';
 import P_Chats from './Screens/Src/Presiding_Officer/P_Chats';
 import Verify_C from './Screens/Src/Presiding_Officer/Verify_C';
 import All_C from './Screens/Src/Presiding_Officer/All_C';
@@ -66,6 +67,7 @@ const App=()=> {
         <Stack.Screen name="P_Dashbord" component={P_Dashbord} />
         <Stack.Screen name="All_VO" component={All_VO} />
         <Stack.Screen name="Verify_VO" component={Verify_VO} />
+        <Stack.Screen name="P_Profile_Edit" component={P_Profile_Edit} />
         <Stack.Screen name="P_Profile" component={P_Profile} />
         <Stack.Screen name="All_C" component={All_C} />
         <Stack.Screen name="Verify_C" component={Verify_C} />
