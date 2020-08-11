@@ -40,7 +40,7 @@ const C_Register = ({route, navigation}) => {
         inputPadding={16}
       />
       <Fumi
-        label={'Phone Nymber'}
+        label={'Phone Number'}
         iconClass={FontAwesomeIcon}
         iconName={'volume-control-phone'}
         iconColor={'#4BA3C3'}

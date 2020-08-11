@@ -5,12 +5,12 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button} from 'react-native-elements';
 import {Fumi} from 'react-native-textinput-effects';
 
-const V_Register = ({route, navigation}) => {
-  const {ref} = route.params;
+const V_Register = ({ navigation}) => {
+  
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.mainheading}>Register as {ref} </Text>
+        <Text style={styles.mainheading}>Register as Voter </Text>
       </View>
       <Fumi
         label={'Name'}
@@ -40,7 +40,7 @@ const V_Register = ({route, navigation}) => {
         inputPadding={16}
       />
       <Fumi
-        label={'Phone Nymber'}
+        label={'Phone Number'}
         iconClass={FontAwesomeIcon}
         iconName={'volume-control-phone'}
         iconColor={'#4BA3C3'}
