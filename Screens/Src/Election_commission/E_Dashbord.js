@@ -1,17 +1,18 @@
 /* eslint-disable no-undef */
 /* eslint-disable prettier/prettier */
-import React, {useState}from 'react';
+import React, {useState, useContext}from 'react';
 import {StyleSheet,TouchableOpacity,Text, Dimensions,View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {Avatar,Divider,Overlay} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import {Context as Auth} from '../../Context/AuthContext';
 
 
 
 const {width} = Dimensions.get('window');
 export default function E_Dashbord({navigation}) {
   // const [overly, setOverly] = useState(true);
+  const {state} = useContext(Auth)
   return (
     <View  style={styles.container}>
       
@@ -40,7 +41,7 @@ export default function E_Dashbord({navigation}) {
           borderLeftColor: 'red',
           }}
         />
-        <Text style={styles.text,{alignSelf:"center",fontSize:30,marginBottom:20,}}>Talha MAnzoor</Text>
+        <Text style={styles.text,{alignSelf:"center",fontSize:30,marginBottom:20,}}>{state.e_user.username}</Text>
           <View style={{flexDirection:'row',justifyContent:'space-around', }}>
           <Text style={styles.text}>1{'\n'}<Text style={styles.subtext}>Orgnization</Text></Text>
           

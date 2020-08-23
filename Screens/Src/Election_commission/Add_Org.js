@@ -1,13 +1,18 @@
-import React, {useState} from 'react';
+import React ,{useState ,useContext} from 'react';
 import {StyleSheet, Image, View, Text,TouchableOpacity} from 'react-native';
 import { Kaede } from 'react-native-textinput-effects';
 import ImagePicker from 'react-native-image-picker';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button, Overlay} from 'react-native-elements';
 import DatePicker from 'react-native-date-picker'
+import {Context as Auth} from '../../Context/AuthContext';
 
-
-export default function Add_Org() {
+export default function Add_Org({navigation}) {
+  const {state,addorg} = useContext(Auth)
+  const [oname, setonmae] = useState('');
+  const [opost, setopost] = useState('');
+  const [oaddress, setoaddress] = useState('');
+  const [odiscreption, setodiscreption] = useState('')
   const chooseImage = () => {
     let options = {
     title: 'Select Avatar', 
@@ -33,7 +38,7 @@ export default function Add_Org() {
     });
     }
   var [fileUri, SetFileuri] = useState();
-  const [date, setDate] = useState(new Date());
+  const [ovotetime, setDate] = useState(new Date());
   const [overlay, setoverlay] = useState(false)
 
  
@@ -46,13 +51,13 @@ export default function Add_Org() {
       <Overlay isVisible={overlay} >
       <View>
       <DatePicker
-      date={date}
+      date={ovotetime}
       style={{height:140,width:240}}
       onDateChange={setDate}
       
     />
     <TouchableOpacity onPress={()=>setoverlay(false)}>
-      <Text>Close Me</Text>
+      <Text>okay</Text>
     </TouchableOpacity>
       </View>
     
@@ -72,20 +77,24 @@ export default function Add_Org() {
     <Kaede
     label={'Orgnization Name'}
     inputPadding={16}
+    onChangeText={(text) => { setonmae(text) }}
       />
       <Kaede
         label={'Candidate Post'}
         inputPadding={16}
+        onChangeText={(text) => { setopost(text) }}
       />
       <Kaede
         label={'Adress'}
         inputPadding={16}
+        onChangeText={(text) => { setoaddress(text) }}
       />
       
       
       <Kaede
         label={'Description'}
         inputPadding={16}
+        onChangeText={(text) => { setodiscreption(text) }}
       />
     </View>
     
@@ -108,7 +117,9 @@ export default function Add_Org() {
           type="outline"
           iconRight={true}
           onPress={() => {
-            navigation.navigate('Details');
+            
+            
+            navigation.navigate('E_Dashbord')
           }}
         />
       </View>

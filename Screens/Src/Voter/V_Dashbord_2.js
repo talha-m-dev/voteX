@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component } from 'r eact';
 import {
   StyleSheet,
   Text,
@@ -15,7 +15,7 @@ export default function V_Dashbord_2() {
             <View style={styles.headerContent}>
                 <Image style={styles.avatar} source={{uri: 'https://bootdey.com/img/Content/avatar/avatar1.png'}}/>
                 <Text style={styles.name}>
-                  John Doe
+                  Talha Manzoor
                 </Text>
             </View>
           </View>
@@ -38,7 +38,7 @@ export default function V_Dashbord_2() {
           <View style={styles.body}>
             <View style={styles.bodyContent}>
               <TouchableOpacity style={styles.buttonContainer}>
-                <Text>Opcion 1</Text>  
+                <Text>Voting System</Text>  
               </TouchableOpacity> 
               <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
             </View>

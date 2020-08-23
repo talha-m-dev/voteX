@@ -1,24 +1,33 @@
-import React from 'react';
+import React ,{useState ,useContext} from 'react';
 import {Text, StyleSheet, Dimensions, View} from 'react-native';
 import {Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Fumi} from 'react-native-textinput-effects';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import {Context as Auth} from '../../Context/AuthContext';
 
 const {height, width} = Dimensions.get('window');
 
-const E_Auth = ({route, navigation}) => {
-  const {ref} = route.params;
+
+
+const E_Auth = ({ navigation}) => {
+
+    const {state,login} = useContext(Auth)
+    const [email, setemail] = useState('');
+    const [password, setpassword] = useState('');
+
   return (
+
     <View style={styles.container}>
       <View style={styles.head}>
         <Text style={styles.mainheading}>
+          {console.log(state.e_user)}
           {' '}
           Welcome to{'\n'}
-          {ref}
+          EC
         </Text>
       </View>
-
+          {state.error_msg? <Text>{state.error_msg}</Text>:null}
       <View style={styles.main}>
         <View>
         <View style={styles.border}>
@@ -30,6 +39,8 @@ const E_Auth = ({route, navigation}) => {
         iconSize={20}
         iconWidth={40}
         inputPadding={16}
+        
+        onChangeText={(text) => { setemail(text) }}
       /></View>
       <View style={styles.border}>
       <Fumi
@@ -40,6 +51,8 @@ const E_Auth = ({route, navigation}) => {
         iconSize={20}
         iconWidth={40}
         inputPadding={16}
+         
+        onChangeText={(text) => { setpassword(text) }}
       />
       </View>
         </View>
@@ -49,7 +62,13 @@ const E_Auth = ({route, navigation}) => {
           title="Log in     "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('E_Dashbord', {ref})}
+          onPress={() =>{ 
+            login({email,password})
+            console.log({email,password})
+            console.log(state.e_user.email)
+            if(state.e_user.email === email)
+            navigation.navigate('E_Dashbord')
+          }}
         />
         <Button
           buttonStyle={styles.btn}
@@ -57,7 +76,7 @@ const E_Auth = ({route, navigation}) => {
           title=" Register   "
           type="outline"
           iconRight={true}
-          onPress={() => navigation.navigate('E_Register', {ref})}
+          onPress={() => navigation.navigate('E_Register')}
         />
         <Button
           buttonStyle={styles.btn}

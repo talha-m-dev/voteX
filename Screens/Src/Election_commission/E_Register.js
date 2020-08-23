@@ -1,16 +1,19 @@
-import React from 'react';
+import React ,{useState ,useContext} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Button} from 'react-native-elements';
 import {Fumi} from 'react-native-textinput-effects';
-
-const E_Register = ({route, navigation}) => {
-  const {ref} = route.params;
+import {Context as Auth} from '../../Context/AuthContext';
+const E_Register = ({ navigation}) => {
+  const {state,login,signup} = useContext(Auth)
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
+  const [username, setname] = useState('');
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.mainheading}>Register as {ref} </Text>
+        <Text style={styles.mainheading}>Register as Electio Commission </Text>
       </View>
       <Fumi
         label={'Name'}
@@ -20,6 +23,7 @@ const E_Register = ({route, navigation}) => {
         iconSize={20}
         iconWidth={40}
         inputPadding={16}
+        onChangeText={(text) => { setname(text) }}
       />
       <Fumi
         label={'Email'}
@@ -29,6 +33,7 @@ const E_Register = ({route, navigation}) => {
         iconSize={20}
         iconWidth={40}
         inputPadding={16}
+        onChangeText={(text) => { setemail(text) }}
       />
       <Fumi
         label={'Password'}
@@ -38,15 +43,7 @@ const E_Register = ({route, navigation}) => {
         iconSize={20}
         iconWidth={40}
         inputPadding={16}
-      />
-      <Fumi
-        label={'Phone Number'}
-        iconClass={FontAwesomeIcon}
-        iconName={'volume-control-phone'}
-        iconColor={'#4BA3C3'}
-        iconSize={20}
-        iconWidth={40}
-        inputPadding={16}
+        onChangeText={(text) => { setpassword(text) }}
       />
       <View style={styles.btnstyl}>
         <Button
@@ -55,6 +52,13 @@ const E_Register = ({route, navigation}) => {
           title=" Register    "
           type="outline"
           iconRight={true}
+          onPress={() =>{ 
+            signup({username,email,password})
+            console.log({email,password})
+            console.log(state.e_user.email)
+            if(state.e_user.email === email)
+            navigation.navigate('E_Dashbord')
+          }}
         />
         <Button
           buttonStyle={styles.btn}
